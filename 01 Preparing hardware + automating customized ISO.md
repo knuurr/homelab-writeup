@@ -25,7 +25,7 @@ With all these requirements, in my opinion, SBC's (like Raspberry Pi) would be i
 
 Although RAM is not expandable, adding storage is as easy as buying SD card with more space. There's probably no need to worry about driver issues as SBCs usually have either their official Linux images, tailroed to hardware they are built with or some kind of community which supports these devices with custom builds. This solves potential problems with provisioning devices.
 
-![[3051885-40.jpg]]
+![](3051885-40.jpg)
 
 However, due to unavaibility of Pi's and high prices of used ones I had to get creative and settle for "thin clients".
 
@@ -36,7 +36,7 @@ For my home lab, I went for used Dell Wyse 5060 thin client. Mine came with Wifi
 1) need to make sure device from listing you are interested in comes with Wifi card + antennas connected to it 
 2) separately equip your thin client with network card + antennas
 
-![[5060_450.jpg]]
+![](5060_450.jpg)
 
 I also needed a way to output what's happening on screen of terminal during installation. This will be helpful because we first need to install Linux distro in machine. If any error arises during installation, we need to have a way to see the screen output, or even be able to enter the shell if more advanced troubleshooting i.e. checking installation logs is needed.
 
@@ -51,18 +51,18 @@ For that, I needed:
 - (optional, only for my circumstances) USB-B to USB-C converter
 	- that's only because on left side of my laptop I have USB-C port, and plugging in from right side would be inconvienient for me
 
-![[i-retoo-adapter-displayport-do-hdmi-display-port-dp.webp]]
+![](i-retoo-adapter-displayport-do-hdmi-display-port-dp.webp)
 *DisplayPort to HDMI converter*
 
-![[10884417_800.jpg]]
+![](10884417_800.jpg)
 *HDMI cable*
 
-![[KARTA-PRZECHWYTYWANIA-WIDEO-VIDEO-GRABBER-HDMI-USB.jpg]]
+![](KARTA-PRZECHWYTYWANIA-WIDEO-VIDEO-GRABBER-HDMI-USB.jpg)
 *HDMI to USB-B converter*
 
 This stack allows me to connect my thin client to my laptop and receive output signal just as it was external camera.
 
-![[Pasted image 20230530164624.png]]
+![](Pasted%20image%2020230530164624.png)
 
 For this solution and USB keyboard connected to the thic client will also be needed to control 
 
@@ -112,7 +112,7 @@ Autoinstall.yaml can also use cloud-init sections, I'll use it for some tasks an
 
 When downloading PXEless repo, I'd only like to point out that there is also a great example template for Autoinstall, which can be used as reference for other modifications and learning.
 
-![[Pasted image 20230528223425.png]]
+![](Pasted%20image%2020230528223425.png)
 
 My entire Autoinstall.yaml is present in repo. I will only go through most important sections of my configuration, to clarify some choices I made.
 
@@ -359,7 +359,7 @@ docker --version
 # Docker version 20.10.24, build 297e128
 ```
 
-![[Pasted image 20230529001236.png]]
+![](Pasted%20image%2020230529001236.png)
 
 We start by cloning git repo of pxeless, and `cd` into it:
 
@@ -377,11 +377,11 @@ It can be downloaded from official source [here](https://ubuntu.com/download/ser
 wget https://releases.ubuntu.com/22.04.2/ubuntu-22.04.2-live-server-amd64.iso
 ```
 
-![[Pasted image 20230529003700.png]]
+![](Pasted%20image%2020230529003700.png)
 
 Inside pxeless folder, theres is extras folder. This is where we can copy Netplan config file (or any arbitrary file too), which after installation will be copied to target host.
 
-![[Pasted image 20230529003954.png]]
+![](Pasted%20image%2020230529003954.png)
 
 
 Now, to generate ISO, all we need to do is run command below:
@@ -398,9 +398,9 @@ Here are few CLI options I want to describe what they do. All of them are explai
  - `-s ubuntu-22.04.2-live-server-amd64.iso`: Specifies the source ISO file to use for the installation. In this case, it's the `ubuntu-22.04.2-live-server-amd64.iso` file
  - -   `-x /data/extras`: Specifies a folder (`/data/extras`) that contains additional files and folders to be copied into the root of the generated ISO. This is useful for including custom scripts or additional resources in the installation image. We use it for Netplan config.
 
-![[Pasted image 20230529005204.png]]
+![](Pasted%20image%2020230529005204.png)
 
-![[Pasted image 20230529005224.png]]
+![](Pasted%20image%2020230529005224.png)
 
 `ubuntu-autoinstall.iso` is our image we can use for installation.
 
@@ -408,22 +408,22 @@ For preparing installation media, I used Rufus. Etcher did not work for me.
 
 To quickly access location of generated ISO, you can type `explorer.exe .` inside WSL2 terminal. This will open Windows Explorer window inside pxeless folder, inside WSL2 filesystem. 
 
-![[Pasted image 20230529010500.png]]
+![](Pasted%20image%2020230529010500.png)
 
 You can copy path location from there and supply it to Rufus when clicking SELECT.
 
 There isn't much to configure. Just make sure you select proper device for installation, so you won't wipe any other attached storage. Also whether it's GPT or MBR is of course device-dependent, but it will probably be GPT.
 
-![[Pasted image 20230529010123.png]]
+![](Pasted%20image%2020230529010123.png)
 
 After Rufus finished, USB stick is ready.
 
 All we need to make sure now is that our target machine has booting from USB stick enabled AND that, if other OS is already installed, it will boot from USB first.
 
 
-![[Pasted image 20230530165407.png]]
+![](Pasted%20image%2020230530165407.png)
 
-![[Pasted image 20230530165434.png]]
+![](Pasted%20image%2020230530165434.png)
 
 
 In the end after installation, you will have your ready to use server which you can SSH into.
