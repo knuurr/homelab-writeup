@@ -410,10 +410,10 @@ Now, all that is needed is to run Ansible playbook and wait couple minutes befor
 ansible-playbook -i inventory main.yaml
 ```
 
-![[Pasted image 20230529172118.png]]
+![[Pasted%20image%2020230529172118.png]]
 
 After that you can SSH into server and enjoy your ready to use setup :) Here's my using `tmux`, after applying my roles
 
-![[Pasted image 20230529203257.png]]
+![[Pasted%20image%2020230529203257.png]]
 
 

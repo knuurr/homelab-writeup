@@ -9,7 +9,7 @@ Each application, if it exposes any website over HTTP or HTTPS, will be accessib
 For my own use, I've created multiple docker-compose files, each for single self-hosted application. It is possible to flatten the structure and contain them in single docker-compose file, however separating each file for each service grants me more flexibility and was my conscious choice.
 (not all on the screen are actually used, some are leftovers from earlier tests)
 
-![[Pasted image 20230529212123.png]]
+![[Pasted%20image%2020230529212123.png]]
 
 ## Traefik reverse proxy - the skeleton for backend
 
@@ -332,7 +332,7 @@ I will show it on an example of Heimdall, a very convenient dashboard for self-h
 
 It's that simple to add any new application to container: define dedicated hostname, apply TLS and add authelia as middleware. That is enough to incorporate any new software.
 
-![[Pasted image 20230530025127.png]]
+![[Pasted%20image%2020230530025127.png]]
 
 ## Setting up local domain
 
@@ -346,7 +346,7 @@ Pi-hole can be setup as DNS for such scenario, even if it's main purpose is ad-b
 
 My ISP-provided router, which I do not have a freedom of swapping for another device right now, does not allow pointing to custom DNS servers. All it allows is statically mapping hostname to IP address, which sadly means that I need to manually add or remove any entry in order to have my deployed applications accessible on all my devices within home network.
 
-![[Pasted image 20230530040655.png]]
+![[Pasted%20image%2020230530040655.png]]
 
 That is "ok" for me for now, but will be looking for other solutions.
 
@@ -458,7 +458,7 @@ I was very pleased because at first sight it seemed to work, because app when ac
 https://app.domain.local/testapp/foo/bar?query=value&a=b
 ```
 
-![[Pasted image 20230530041510.png]]
+![[Pasted%20image%2020230530041510.png]]
 
 Unfortunately it's not that easy because then I was testing it with other real applications, it created various problems, such as with fetching assets including .CSS and .JS files.
 
@@ -470,10 +470,10 @@ These solutions also involve modifying the core files of Vueapp, in a way that a
 
 https://community.traefik.io/t/javascript-vue-js-app-behind-traefik-v2-0/1874/7
 
-![[Pasted image 20230527175023.png]]
+![[Pasted%20image%2020230527175023.png]]
 
 
-![[Pasted image 20230527173601.png]]
+![[Pasted%20image%2020230527173601.png]]
 
 
 I'd really like to know if there is any generic way to achieve this, as I see hosting applications under different URL paths cleaner that assigning each application its own subdomain. 
