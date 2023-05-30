@@ -8,8 +8,8 @@ This writeup assumes at least some knowledge epsecially on Ansible, SSH, contain
 
 Entire writeup is divided into 3 parts. Each part touches different stages of deployment:
 
-- ![Preparing hwardware + automating Linux ISO creation](01%20Preparing%20hardware%20+%20automating%20customized%20ISO.md)
-- ![Configuring machine with Ansible](02%20Ansible.md)
+- ![Preparing hardware + automating Linux ISO creation](01%20Preparing%20hardware%20+%20automating%20customized%20ISO.md)
+- ![Configuring server with Ansible](02%20Ansible.md)
 - ![Running self-hosted apps with Docker-Compose, along with configuring reverse proxy + SSO for all apps](03%20Docker.md)
 
 I've made such division because I suspect not everyone may be interested in whole walkthrough, and is just interested in part of it. Besides that, keeping it all in 1 document would result in a very long file, which would be hard to come back to later (for you) and maintain (for me).
