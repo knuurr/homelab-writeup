@@ -6,12 +6,21 @@ Welcome to my Home Lab repository! 🏠🔬
 
 This repository serves as a write-up and documentation for my personal Home Lab, where I explore various aspects of Linux, hosting, reverse proxy, Traefik, containers, Docker, and more. It's a playground for learning and experimenting with different technologies.
 
+![banner](https://github.com/knuurr/homelab-writeup/assets/135069967/8168636d-ee04-41d0-8ddc-4ead3315d252)
+
+
 ## Features
 
 - **Reverse Proxy**: I maintain a reverse proxy on my home server using Traefik. It allows me to efficiently manage and route incoming traffic to different services.
 - **SSL with Let's Encrypt**: All my services are protected with SSL encryption, thanks to Let's Encrypt. This ensures secure communication and peace of mind.
+
+![let's encrypt](https://github.com/knuurr/homelab-writeup/assets/135069967/928fbf1b-dca2-4c53-abb6-2ca73889dd99)
+
+
 - **Containerization with Docker**: I leverage the power of Docker to encapsulate my services into containers. It provides flexibility, isolation, and easy management of individual components.
 - **Single Sign-On (SSO)**: My services are protected with Single Sign-On, enhancing security and simplifying authentication for seamless user experience.
+- Includes simple dashboards for system **monitoring** and **observability**.
+
 
 
 I initially started with self-hosted home lab server as a way to experiment and learn with core DevOps technologies, including Docker, Ansible, cloud-init/Autoinstall and in some future kubernetes, for easier and automated provisioning. 
