@@ -29,9 +29,15 @@ This writeup assumes at least some knowledge epsecially on Ansible, SSH, contain
 
 Entire writeup is divided into 3 parts. Each part touches different stages of deployment:
 
-- ![Preparing hardware + automating Linux ISO creation](01%20Preparing%20hardware%20+%20automating%20customized%20ISO.md)
-- ![Configuring server with Ansible](02%20Ansible.md)
-- ![Running self-hosted apps with Docker-Compose, along with configuring reverse proxy + SSO for all apps](03%20Docker.md)
+- [01 Preparing hardware + automating Linux ISO creation](01_preparing_hardware.md)
+- [02 Configuring machine with Ansible](02_ansible.md)
+- [03 Running self-hosted apps with Docker-Compose, along with configuring reverse proxy + SSO for all apps](03_docker.md)
+
+>*NOTE: because writeup and actual machine configuration and playbooks are currently in a state of drift away, I want to provide updates in a form of atomic smaller guides, while I will be working on an general update.*
+
+- [Configuring Traefik with Let's Encrypt DNS-01 Challenge using DuckDNS - no more self-signed cert!](traefik_plus_letsencrypt.md)
+- [Configuring Prometheus, Grafana, and node_exporter - visualise system performance easily!](grafana_dashboard.md)
+
 
 I've made such division because I suspect not everyone may be interested in whole walkthrough, and is just interested in part of it. Besides that, keeping it all in 1 document would result in a very long file, which would be hard to come back to later (for you) and maintain (for me).
 
