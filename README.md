@@ -15,7 +15,47 @@ This repository serves as a write-up and documentation for my personal Home Lab,
 
 Ansible playbooks for this project are available [in my repo](https://github.com/knuurr/homelab-playbooks).
 
+Sure, I'd be happy to help you with the "Usage" section for your Ansible playbook repository README.md file. Below is the content you can include in your README.md:
 
+## Usage
+
+Before running the Ansible playbooks, ensure you have the following prerequisites:
+
+1. Ansible installed on your local machine or control node.
+2. Access to the target server(s) via SSH with sudo privileges.
+
+### Main Playbook - `main.yml`
+The `main.yml` playbook is the primary playbook used for provisioning and configuring your server. It provides essential setup and applies necessary configurations, including the Docker Compose files for managing containers.
+
+To run the main playbook, use the following command:
+
+```bash
+ansible-playbook main.yml
+```
+
+This playbook will take care of setting up the server and deploying the Docker containers based on the provided configurations.
+
+### Container Management Playbook - `manage-containers.yml`
+The `manage-containers.yml` playbook allows you to perform ad hoc actions on a subset of containers. It provides tasks for restarting, stopping, starting, or recreating specific containers based on the variables specified in the playbook.
+
+To use the container management playbook, execute the following command:
+
+```bash
+ansible-playbook manage-containers.yml
+```
+
+Please refer to the comments inside the playbook for more information on how to control which containers to manage using variables.
+
+### Mount External Hard Drive Playbook - `mount-external-hdd.yml`
+The `mount-external-hdd.yml` playbook is designed for mounting an external USB hard drive and setting up a systemd mount. Additionally, it installs Samba for file sharing. This playbook is kept separate from the main playbook to avoid unnecessary configurations for users who do not require external HDD support.
+
+To mount an external hard drive and set up Samba, use the following command:
+
+```bash
+ansible-playbook mount-external-hdd.yml
+```
+
+Please note that if your containers rely on volumes pointing to the external HDD, you may need to restart those containers after running this playbook to ensure the correct volume paths.
 
 ## Features
 
