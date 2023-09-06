@@ -94,8 +94,9 @@ Entire writeup is divided into 3 parts. Each part touches different stages of de
 
 >**NOTE: because writeup and actual machine configuration and playbooks are currently in a state of drift away, I want to provide updates in a form of atomic smaller guides, while I will be working on an general update.**
 
-- [Configuring Traefik with Let's Encrypt DNS-01 Challenge using DuckDNS - no more self-signed cert!](traefik_plus_letsencrypt.md)
-- [Configuring Prometheus, Grafana, and node_exporter - visualise system performance easily!](grafana_dashboard.md)
+- ⭐ [Configuring Traefik with Let's Encrypt DNS-01 Challenge using DuckDNS - no more self-signed cert!](traefik_plus_letsencrypt.md)
+- ⭐ [Configuring Prometheus, Grafana, and node_exporter - visualise system performance easily!](grafana_dashboard.md)
+- ⭐ [Automating Ubuntu ISO creation and installation with cloud-init, AUtoinstall and PXEless docker image](iso_autoinstall.md)
 
 
 I've made such division because I suspect not everyone may be interested in whole walkthrough, and is just interested in part of it. Besides that, keeping it all in 1 document would result in a very long file, which would be hard to come back to later (for you) and maintain (for me).
