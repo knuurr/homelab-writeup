@@ -15,8 +15,6 @@ This repository serves as a write-up and documentation for my personal Home Lab,
 
 Ansible playbooks for this project are available [in my repo](https://github.com/knuurr/homelab-playbooks).
 
-Sure, I'd be happy to help you with the "Usage" section for your Ansible playbook repository README.md file. Below is the content you can include in your README.md:
-
 ## Usage
 
 Before running the Ansible playbooks, ensure you have the following prerequisites:
